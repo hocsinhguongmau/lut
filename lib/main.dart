@@ -5,8 +5,8 @@ void main() {
 }
 
 // const primaryColor = Colors.blue;
-Color primaryColor = Color(0x185FCA);
-Color secondaryColor = Color(0x709CDE);
+Color primaryColor = Colors.purple;
+Color secondaryColor = Colors.black87;
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -38,6 +38,7 @@ class MyHomePage extends StatelessWidget {
               Icons.more_vert_outlined,
               color: Color(0xffffffff),
             ),
+            onPressed: () {},
           ),
         ],
       ),
@@ -86,8 +87,11 @@ Widget _listItem() {
           Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(5.0),
+                Container(
+                  decoration: BoxDecoration(
+                      color: Colors.orange,
+                      border: Border.all(color: Colors.orange),
+                      borderRadius: BorderRadius.circular(5.0)),
                   child: Image.network(
                       'https://chinapost-track.com/cdn/images/carriers/icons/0025-posti-finland-post.png',
                       width: 65,
